@@ -18,14 +18,13 @@ for i in range(2, 101):
     for j in range(2, 101):
         powers.append(i**j)
 
+#print(powers)
 
-x = powers
+distinct = []
 
-for i in range(len(str(powers))):
-    p = powers[i]
-    count = 0
-    for j in range(len(str(powers))):
-        if count != 0 and p == powers[j]:
-            x[j] = ""
+for i in range(len(powers)):
+    if not(powers[i] in distinct):
+        distinct.append(powers[i])
 
-print(len(x))
+print(len(powers))
+print(len(distinct))
